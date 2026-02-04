@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>lovelove always kj</title>
+<style>
+  /* Body styling */
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    text-align: justify;
+    font-style: italic;
+
+    /* Background image with gradient overlay */
+    background: 
+      linear-gradient(135deg, rgba(73, 13, 7, 0.89), rgb(59, 4, 4)),
+      url('p21.jpg') no-repeat center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  /* Card container */
+  .card {
+    background: rgba(113, 18, 18, 0);
+    padding: 1px 1px;
+    border-radius: 50px;
+    justify-content: center;
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0);
+    max-width: 800px;
+    width: 90%;
+    z-index: 1;
+    position: relative;
+  }
+
+  /* Heading */
+  h1 {
+    color: #b4a1a3fe;
+    margin-bottom: 50px;
+    font-size: 60px; /* increased font size */
+  }
+
+  /* Buttons container */
+  .buttons {
+     padding: 18px 36px; /* bigger padding */
+    font-size: 20px; /* bigger text */
+    display: flex;
+     font-style: 'italic', bold;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    gap: 15px;
+  }
+
+  /* Buttons */
+  button {
+    padding: 18px 36px; /* bigger padding */
+    font-size: 20px; /* bigger text */
+    border: none;
+   font-style: 'italic', bold;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    border-radius: 25px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  /* Yes button */
+  #yesBtn {
+    background: #52070d;
+    color: white;
+  }
+
+  #yesBtn:hover {
+    background: #620b14;
+    transform: scale(1.1);
+  }
+
+  /* No button */
+  #noBtn {
+    background: #482020;
+    color: white;
+    position: relative;
+  }
+
+  /* Message box */
+  #message {
+    margin-top: 30px;
+    font-size: 28px; /* bigger font */
+    font-weight: bold;
+    color: #e63946;
+    display: none;
+  }
+
+  /* Flower petals */
+  .petal {
+    position: fixed;
+    top: -50px;
+    font-size: 28px; /* bigger petals */
+    color: rgb(152, 29, 29);
+    animation-name: fall;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100px) translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1> ❤️BE MY VALENTINE❤️ </h1>
+
+    <div class="buttons">
+      <button id="yesBtn">Yes na yes</button>
+      <button id="noBtn">Yes</button>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const message = document.getElementById('message');
+
+    // Yes button click
+    yesBtn.addEventListener('click', () => {
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 1);
+    });
+
+    // No button hover (moves around)
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * 500 - 150;
+      const y = Math.random() * 500 - 150;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    // No button click
+    noBtn.addEventListener('click', () => {
+      message.style.display = 'block';
+      message.innerText = "You don't love me anymore : (";
+    });
+
+    // Floating flower petals
+    const petalCount = 30; // number of petals
+    for (let i = 0; i < petalCount; i++) {
+      const petal = document.createElement('div');
+      petal.className = 'petal';
+      petal.innerHTML = ' ❤️'; // flower emoji
+
+      // Random horizontal starting position
+      petal.style.left = Math.random() * window.innerWidth + 'px';
+      // Random animation duration
+      petal.style.animationDuration = (5 + Math.random() * 10) + 's';
+      // Random size
+      petal.style.fontSize = (30 + Math.random() * 40) + 'px';
+
+      document.body.appendChild(petal);
+    }
+  </script>
+</body>
+</html>

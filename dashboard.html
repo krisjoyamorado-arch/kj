@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pretty so much lablab</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: 
+      linear-gradient(135deg, rgba(73, 12, 7, 0.745), rgb(59, 4, 4)),
+      url('p21.jpg') no-repeat center center;                                                                                                   
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    font-size: 36px;
+    color: #e1b676;
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #b5172c;
+    text-align: center;
+  }
+
+  .heart-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 100px);
+    gap: 5px;
+    margin-bottom: 40px;
+  }
+
+  .heart-grid div {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #8f2222;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+
+  .heart-grid div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .heart-grid div:hover img {
+    transform: scale(1.1);
+  }
+
+  .heart-grid .empty {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .love-letter {
+    text-align: justify;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.8;
+    font-family: 'Georgia', serif;
+    max-width: 900px;
+    margin-bottom: 40px;
+    color: #b4aaaa;
+  }
+
+  .back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 22px;
+    background: #680f166f;
+    color: rgba(0, 0, 0, 0.964);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+
+  .back-btn:hover {
+    background: #600811;
+    transform: scale(1.05);
+  }
+
+  .petal {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    color: #de9519;
+    animation-name: fall;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 0;
+  }
+
+  @keyframes fall {
+    0% { transform: translateX(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateX(100px) translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+
+  /* Music Button */
+  .music-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    border:none;
+    background:#680f16;
+    color:white;
+    padding:12px 18px;
+    border-radius:50px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    font-size:18px;
+    z-index:10;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio id="bg-music" autoplay loop>
+  <source src="H.E.R. - Best Part (Lyrics) Ft. Daniel Caesar.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<h1>🤍 My Love Of My Life 🤍</h1>
+
+<div class="section-title"></div><br>
+
+<div class="heart-grid">
+  <div class="empty"></div>
+   <div class="empty"></div>
+  <div><img src="p1.jpg" alt=""></div>
+  <div><img src="p2.jpg" alt=""></div>
+  <div class="empty"></div>
+  <div><img src="p3.jpg" alt=""></div>
+  <div><img src="p4.jpg" alt=""></div>
+  <div class="empty"></div>
+   <div class="empty"></div>
+    <div class="empty"></div>
+
+  <div><img src="p20.jpg" alt=""></div>
+  <div><img src="p6.jpg" alt=""></div>
+  <div><img src="p7.jpg" alt=""></div>
+  <div><img src="p8.jpg" alt=""></div>
+  <div><img src="p9.jpg" alt=""></div>
+  <div><img src="p10.jpg" alt=""></div>
+  <div><img src="p11.jpg" alt=""></div>
+
+
+  <div class="empty"></div>
+  <div><img src="p12.jpg" alt=""></div>
+  <div><img src="p13.jpg" alt=""></div>
+  <div><img src="p14.jpg" alt=""></div>
+  <div><img src="p15.jpg" alt=""></div>
+  <div><img src="p16.jpg" alt=""></div>
+  <div><img src="p17.jpg" alt=""></div>
+  <div><img src="p18.jpg" alt=""></div>
+  <div><img src="p19.jpg" alt=""></div>
+  <div><img src="p37.jpg" alt=""></div>
+  <div class="empty"></div>
+
+ 
+  <div><img src="p22.jpg" alt=""></div>
+  <div><img src="p23.jpg" alt=""></div>
+  <div><img src="p24.jpg" alt=""></div>
+  <div><img src="p25.jpg" alt=""></div>
+  <div><img src="p26.jpg" alt=""></div>
+  <div><img src="p27.jpg" alt=""></div>
+  <div><img src="p28.jpg" alt=""></div>
+ 
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <div><img src="p29.jpg" alt=""></div>
+  <div><img src="p30.jpg" alt=""></div>
+  <div><img src="p31.jpg" alt=""></div>
+  <div><img src="p32.jpg" alt=""></div>
+  <div><img src="p33.jpg" alt=""></div>
+   <div class="empty"></div>
+   <div class="empty"></div> 
+
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <div><img src="p34.jpg" alt=""></div>
+   <div><img src="p35.jpg" alt=""></div>
+    <div><img src="p36.jpg" alt=""></div>
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <div class="empty"></div>
+
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <div class="empty"></div>
+   <div class="empty"></div>
+  <div><img src="p5.jpg" alt=""></div>
+  <div class="empty"></div>
+  <div class="empty"></div>
+  <div class="empty"></div><br>
+
+</div>
+
+ 
+</div>
+
+
+
+<div class="love-letter"><br><br>
+  My dearest Alliana,<br><br>
+  I guess you choose yes na yes, hehehe 🤍<br>
+  Valentine’s Day is coming, palangga, and I just want to tell you how deeply I adore you. 
+  I’m so grateful to have you in my life — more than words can ever truly express, ga.
+  Sometimes it makes me sad knowing that we don’t get as much time together as we 
+  want because we’re both busy, but I assure you this: I will always find a way 
+  to make time for you, bb, no matter how busy life gets, bb.<br><br>
+
+  This coming February 14, I want us to go somewhere special, bb, just the two of us — to
+  spend time together, laugh, talk, and create memories that we’ll always remember, langga. 
+  I want to be with you the whole day. Even if you have classes until 7:30—hindi ako sure 
+  sa time — still I don’t mind waiting at all, bb. Time doesn’t matter to me when it comes to you. 
+  Waiting doesn’t matter. The only thing that matters is being with you, ga.<br><br>
+
+  I miss you more than you know, wifey. There are days when I just want to see your face,
+  hear your laugh, and feel your hug because everything feels better when you’re around, ga. 
+  I’m so proud of you — of who you are, of what you’re becoming, and of everything you do, lovey. 
+  I’m proud of your strength, your kindness, your heart, and your dreams. I love you in every way, 
+  in everyversion of you, in every season of your life. I love you when you’re strong, when you’re
+  tired, when you’re quiet, when you’re happy,  and when you’re overwhelmed — in every moment, bb.<br><br>
+
+  You are my other half, my love, my best friend, my partner, my home, and my forever. You are my greatest 
+  blessing, and my favorite person in this world. No matter where life takes us ga, no matter what we face, 
+  I vow to walk with you through everything — the good days and the hard days, bb. I’ll stay when things are easy, 
+  and I’ll stay even more when things are hard. As long as I have you, ga, I have everything I need.🤍 <br><br>
+Forever yours,<br>
+Your lovelove kj🤍<br><br>
+
+  <a href="index.html" class="back-btn">⬅ Back to Valentine Page</a>
+</div>
+
+<script>
+/* Floating petals */
+const count = 30;
+for(let i=0; i<count; i++){
+  const petal = document.createElement('div');
+  petal.className = 'petal';
+  petal.innerHTML = '❤️';
+  petal.style.left = Math.random() * window.innerWidth + 'px';
+  petal.style.animationDuration = (5 + Math.random() * 10) + 's';
+  petal.style.fontSize = (20 + Math.random() * 30) + 'px';
+  document.body.appendChild(petal);
+}
+
+/* Music autoplay fix */
+const music = document.getElementById("bg-music");
+document.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+  }
+}, { once: true });
+
+/* Music toggle */
+function toggleMusic(){
+  if(music.paused){
+    music.play();
+  } else {
+    music.pause();
+  }
+}
+</script>
+
+</body>
+</html>
