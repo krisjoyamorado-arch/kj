@@ -45,14 +45,21 @@
   /* Heading */
   h1 {
     color: #b4a1a3fe;
-    margin-bottom: 50px;
-    font-size: 60px; /* increased font size */
+    margin-bottom: 15px;
+    font-size: 55px; /* increased font size */
+      gap: 5px;
+  }
+ h2 {
+    color: #ab4a53fe;
+    margin-bottom: 15px;
+    font-size: 30px; /* increased font size */
+     gap: 5px;
   }
 
   /* Buttons container */
   .buttons {
-     padding: 18px 36px; /* bigger padding */
-    font-size: 20px; /* bigger text */
+     padding: 18px 18px; /* bigger padding */
+    font-size: 15px; /* bigger text */
     display: flex;
      font-style: 'italic', bold;
     font-family: 'Georgia', serif;
@@ -64,13 +71,13 @@
 
   /* Buttons */
   button {
-    padding: 18px 36px; /* bigger padding */
-    font-size: 20px; /* bigger text */
+    padding: 18px 18px; /* bigger padding */
+    font-size: 15px; /* bigger text */
     border: none;
    font-style: 'italic', bold;
     font-family: 'Georgia', serif;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 15px;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     cursor: pointer;
     transition: 0.3s ease;
@@ -131,8 +138,8 @@
 </head>
 <body>
   <div class="card">
-    <h1> ❤️BE MY VALENTINE❤️ </h1>
-
+    <h1> Alliana Apadan  </h1>
+    <h2> BE MY VALENTINE </h2>
     <div class="buttons">
       <button id="yesBtn">Yes na yes</button>
       <button id="noBtn">Yes</button>
@@ -167,7 +174,7 @@
     });
 
     // Floating flower petals
-    const petalCount = 30; // number of petals
+    const petalCount = 15; // number of petals
     for (let i = 0; i < petalCount; i++) {
       const petal = document.createElement('div');
       petal.className = 'petal';
